@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="noteform">
+        <button onclick="window.location.href='/profile/'" class='backbut'>Назад</button>
+        <form action="/create_note/" method="POST">
+            <input type="text" placeholder="Заголовок" name=title>
+            <textarea placeholder="Описание..." name=description></textarea>
+            <input type="submit" value="Сохранить" class="sub">
+        </form>
+        
+    </div>
+</body>
+</html>

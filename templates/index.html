@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="content">
+        <div class="authblock">
+            <h1>Авторизация </h1>
+            <form action="/auth/" method="POST" id="loginform">
+                <input type="text" name="login" placeholder="Логин" required>
+                <input type="password" name="pass" placeholder="Пароль" required>
+                <input type="submit" value="Войти" class="sub">
+            </form>
+        </div>
+        <div class="authblock">
+            <h1>Регистрация </h1>
+            <form action="/reg/" method="POST">
+                <input type="text" name="login" placeholder="Логин" required>
+                <input type="password" name="pass" placeholder="Пароль" required>
+                <input type="submit" value="Зарегестрироваться" class="sub">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

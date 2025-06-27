@@ -1,0 +1,131 @@
+.notediv {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 120px;
+    margin: 5px;
+    min-height: 120px;
+    cursor: pointer;
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.notediv p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 4;
+    box-orient: vertical;
+    max-height: calc(1.2em * 4);
+}
+.notediv h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+
+h1 {
+    font-family: "Verdana";
+}
+
+h2 {
+    font-family: "Verdana";
+    font-size: 20px;
+}
+
+#maintext {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    border: 0;
+    margin: 0;
+}
+
+#allnotes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+#newnote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.authblock {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.authblock form {
+    display: flex;
+    flex-direction: column;
+}
+.authblock form input {
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.content {
+    display: flex;
+}
+
+.sub {
+    cursor: pointer;
+}
+
+.noteform {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.noteform form {
+    display: flex;
+    flex-direction: column;
+}
+.noteform form * {
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.noteform form textarea {
+    height: 600px;
+    resize: none;
+}
+
+.backbut {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 60px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+p {
+    margin-bottom: 0;
+}

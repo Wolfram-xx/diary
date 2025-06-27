@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{note[1]}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class='noteform'>
+        <button onclick="window.location.href='/profile/'" class="backbut">Назад</button>
+        <form action="/editnote/" method="POST">
+            <input type="hidden" value={{note[0]}} name="id">
+            <input type="text" value="{{note[1]}}" placeholder="Заголовок" name="title" required>
+            <p>created: {{note[4]}}</p>
+            {% if note[5] == 'ready' %}
+            <p>Задача выполнена</p>
+            {% else %}
+            <p>Задача находится на стадии выполнения</p>
+            {% endif %}
+            <textarea placeholder="Описание..." name="description">{{note[2]}}</textarea>  
+            <input type="submit" value="Сохранить" class="sub">
+        </form>
+        <form action="/changestatus" method="POST">
+            <input type="hidden" value={{note[0]}} name="id">
+            {% if note[5] == 'ready' %}
+                <input type="submit" value="Отметить запись как находящуюся в работе" class="sub">
+            {% else %}
+                <input type="submit" value="Отметить запись как выполненную" class="sub">
+            {% endif %}
+        </form>
+        <form action="/delnote/" method="POST">
+            <input type="hidden" value={{note[0]}} name="id">
+            <input type="submit" value="Удалить" class="sub">
+        </form>
+        
+    </div>
+</body>
+</html>

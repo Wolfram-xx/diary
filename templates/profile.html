@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="maintext">
+        <h1>
+            Привет, {{user.login}}!
+        </h1>
+        <a href="/logout">(Выйти)</a>
+    </div>
+    <div id="allnotes">
+        <div class='notediv' id="newnote" onclick="window.location.href='/profile/newnote/'">
+            <h2>
+                Новая заметка
+            </h2>
+        </div>
+        {% for note in notes %}
+            <div class='notediv' onclick="window.location.href='/note?id={{note[0]}}'">
+                <h2>{{note[1]}}</h2>
+                <p>{{note[2]}}</p>
+                <p>{{note[4]}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
